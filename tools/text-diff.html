@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Text Diff Checker</title>
+<link rel="stylesheet" href="/style.css">
+</head>
 
+<body>
+
+<header class="header">
+<div class="logo">🪐 WebToolPlanet</div>
+<nav>
+<ul class="menu">
+<li><a href="/">Home</a></li>
+<li><a href="/tools.html">Tools</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+
+<h1>Text Difference Checker</h1>
+
+<textarea id="text1" style="width:40%;height:120px;"></textarea>
+<textarea id="text2" style="width:40%;height:120px;"></textarea>
+
+<br><br>
+
+<button onclick="check()">Compare</button>
+
+<p id="result"></p>
+
+</section>
+
+<script>
+
+function check(){
+
+let t1=document.getElementById("text1").value;
+let t2=document.getElementById("text2").value;
+
+document.getElementById("result").innerText=
+(t1===t2) ? "Texts are identical" : "Texts are different";
+
+}
+
+</script>
+
+</body>
+</html>
