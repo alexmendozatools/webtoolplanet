@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>URL Encoder | WebToolPlanet</title>
+<link rel="stylesheet" href="/style.css">
+</head>
 
+<body>
+
+<header class="header">
+<div class="logo">🪐 WebToolPlanet</div>
+<nav>
+<ul class="menu">
+<li><a href="/">Home</a></li>
+<li><a href="/tools.html">Tools</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+
+<h1>URL Encoder</h1>
+
+<textarea id="text" style="width:80%;height:150px;"></textarea>
+
+<br><br>
+
+<button onclick="encode()">Encode</button>
+
+<p id="result"></p>
+
+</section>
+
+<script>
+
+function encode(){
+
+let text=document.getElementById("text").value;
+
+document.getElementById("result").innerText=
+encodeURIComponent(text);
+
+}
+
+</script>
+
+</body>
+</html>
