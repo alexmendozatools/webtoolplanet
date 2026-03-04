@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<title>QR Generator | WebToolPlanet</title>
+<link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo">
+🪐 WebToolPlanet 🔧
+</div>
+
+<nav>
+<ul class="menu">
+
+<li><a href="/">Home</a></li>
+
+<li class="dropdown">
+
+<a href="#">Tools ▾</a>
+
+<ul class="submenu">
+
+<li><a href="/tools/qr-generator.html">QR Generator</a></li>
+<li><a href="/tools/password-generator.html">Password Generator</a></li>
+
+</ul>
+
+</li>
+
+</ul>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>QR Code Generator</h1>
+<p>Create QR codes instantly.</p>
+
+<input id="text" placeholder="Enter text or URL">
+
+<button onclick="generateQR()">Generate</button>
+
+<div id="qrcode"></div>
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+
+function generateQR(){
+
+let text=document.getElementById("text").value;
+
+document.getElementById("qrcode").innerHTML="";
+
+new QRCode(document.getElementById("qrcode"),text);
+
+}
+
+</script>
+
+</body>
+
+</html>
