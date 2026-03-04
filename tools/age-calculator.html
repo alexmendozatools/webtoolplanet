@@ -1,1 +1,76 @@
-tools/age-calculator.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Age Calculator | WebToolPlanet</title>
+<link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo">
+🪐 WebToolPlanet
+</div>
+
+<nav>
+
+<ul class="menu">
+
+<li><a href="/">Home</a></li>
+<li><a href="/tools.html">Tools</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Age Calculator</h1>
+
+<p>Calculate your exact age.</p>
+
+<input type="date" id="birthdate">
+
+<br><br>
+
+<button onclick="calculateAge()">Calculate</button>
+
+<p id="ageResult"></p>
+
+</section>
+
+<script>
+
+function calculateAge(){
+
+let birthdate=new Date(document.getElementById("birthdate").value);
+
+let today=new Date();
+
+let age=today.getFullYear()-birthdate.getFullYear();
+
+let m=today.getMonth()-birthdate.getMonth();
+
+if(m<0 || (m===0 && today.getDate()<birthdate.getDate())){
+
+age--;
+
+}
+
+document.getElementById("ageResult").innerText="Your age: "+age+" years";
+
+}
+
+</script>
+
+</body>
+
+</html>
