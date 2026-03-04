@@ -1,1 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+<loc>https://webtoolplanet.com/</loc>
+</url>
+
+<url>
+<loc>https://webtoolplanet.com/tools.html</loc>
+</url>
+
+<url>
+<loc>https://webtoolplanet.com/tools/qr-generator.html</loc>
+</url>
+
+<url>
+<loc>https://webtoolplanet.com/tools/password-generator.html</loc>
+</url>
+
+<url>
+<loc>https://webtoolplanet.com/tools/word-counter.html</loc>
+</url>
+
+<url>
+<loc>https://webtoolplanet.com/tools/json-formatter.html</loc>
+</url>
+
+<url>
+<loc>https://webtoolplanet.com/tools/age-calculator.html</loc>
+</url>
+
+</urlset>
