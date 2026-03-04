@@ -1,5 +1,7 @@
+/* GENERAL */
+
 body{
-font-family: Inter, Arial, sans-serif;
+font-family:Inter, Arial, sans-serif;
 margin:0;
 background:#f7f8fc;
 color:#1f2937;
@@ -16,26 +18,66 @@ background:white;
 box-shadow:0 2px 12px rgba(0,0,0,0.05);
 }
 
+/* LOGO */
+
 .logo{
 font-size:22px;
 font-weight:700;
 color:#6366f1;
+animation:float 4s ease-in-out infinite;
 }
 
 /* MENU */
 
 .menu{
 display:flex;
-gap:25px;
+gap:30px;
 list-style:none;
 margin:0;
 padding:0;
+align-items:center;
 }
 
 .menu a{
 text-decoration:none;
 color:#374151;
 font-weight:500;
+}
+
+/* DROPDOWN */
+
+.dropdown{
+position:relative;
+}
+
+.submenu{
+display:none;
+position:absolute;
+top:35px;
+left:0;
+background:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+list-style:none;
+padding:10px 0;
+border-radius:10px;
+min-width:200px;
+opacity:0;
+transform:translateY(-5px);
+transition:all .2s ease;
+}
+
+.submenu li{
+padding:8px 18px;
+}
+
+.submenu li a{
+color:#374151;
+}
+
+.dropdown:hover .submenu{
+display:block;
+opacity:1;
+transform:translateY(0);
 }
 
 /* HERO */
@@ -54,7 +96,7 @@ margin-bottom:10px;
 color:#6b7280;
 }
 
-/* TOOL GRID */
+/* GRID DE HERRAMIENTAS */
 
 .tools{
 display:grid;
@@ -65,7 +107,7 @@ max-width:1000px;
 margin:auto;
 }
 
-/* TOOL CARD */
+/* TARJETAS */
 
 .tool-card{
 background:white;
@@ -90,7 +132,7 @@ color:#6b7280;
 font-size:14px;
 }
 
-/* BOTON */
+/* BOTON DE HERRAMIENTA */
 
 .tool-btn{
 display:inline-block;
@@ -112,4 +154,12 @@ padding:30px;
 text-align:center;
 background:#111827;
 color:white;
+}
+
+/* ANIMACIONES */
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-4px);}
+100%{transform:translateY(0px);}
 }
