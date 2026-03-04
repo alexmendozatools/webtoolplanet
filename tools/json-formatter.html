@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<title>JSON Formatter | WebToolPlanet</title>
+<link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo">
+🪐 WebToolPlanet
+</div>
+
+<nav>
+
+<ul class="menu">
+
+<li><a href="/">Home</a></li>
+<li><a href="/tools.html">Tools</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>JSON Formatter</h1>
+
+<p>Format and beautify JSON instantly.</p>
+
+<textarea id="jsonInput" placeholder="Paste JSON here..." style="width:80%;height:150px;padding:10px;"></textarea>
+
+<br><br>
+
+<button onclick="formatJSON()">Format JSON</button>
+
+<pre id="output"></pre>
+
+</section>
+
+<script>
+
+function formatJSON(){
+
+try{
+
+let json=document.getElementById("jsonInput").value;
+
+let formatted=JSON.stringify(JSON.parse(json),null,4);
+
+document.getElementById("output").textContent=formatted;
+
+}
+
+catch{
+
+document.getElementById("output").textContent="Invalid JSON";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
