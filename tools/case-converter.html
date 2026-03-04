@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Case Converter | WebToolPlanet</title>
+<link rel="stylesheet" href="/style.css">
+</head>
 
+<body>
+
+<header class="header">
+<div class="logo">🪐 WebToolPlanet</div>
+<nav>
+<ul class="menu">
+<li><a href="/">Home</a></li>
+<li><a href="/tools.html">Tools</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+
+<h1>Case Converter</h1>
+
+<textarea id="text" style="width:80%;height:150px;"></textarea>
+
+<br><br>
+
+<button onclick="upper()">UPPERCASE</button>
+<button onclick="lower()">lowercase</button>
+
+<p id="result"></p>
+
+</section>
+
+<script>
+
+function upper(){
+let text=document.getElementById("text").value;
+document.getElementById("result").innerText=text.toUpperCase();
+}
+
+function lower(){
+let text=document.getElementById("text").value;
+document.getElementById("result").innerText=text.toLowerCase();
+}
+
+</script>
+
+</body>
+</html>
