@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Random Number Generator</title>
+<link rel="stylesheet" href="/style.css">
+</head>
 
+<body>
+
+<header class="header">
+<div class="logo">🪐 WebToolPlanet</div>
+<nav>
+<ul class="menu">
+<li><a href="/">Home</a></li>
+<li><a href="/tools.html">Tools</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+
+<h1>Random Number Generator</h1>
+
+<input id="min" placeholder="Min">
+<input id="max" placeholder="Max">
+
+<br><br>
+
+<button onclick="generate()">Generate</button>
+
+<p id="result"></p>
+
+</section>
+
+<script>
+
+function generate(){
+
+let min=parseInt(document.getElementById("min").value);
+let max=parseInt(document.getElementById("max").value);
+
+let number=Math.floor(Math.random()*(max-min+1))+min;
+
+document.getElementById("result").innerText=number;
+
+}
+
+</script>
+
+</body>
+</html>
