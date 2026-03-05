@@ -1,51 +1,53 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>Case Converter | WebToolPlanet</title>
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-<header class="header">
-<div class="logo">🪐 WebToolPlanet</div>
-<nav>
-<ul class="menu">
-<li><a href="/">Home</a></li>
-<li><a href="/tools.html">Tools</a></li>
-</ul>
-</nav>
-</header>
-
-<section class="hero">
-
 <h1>Case Converter</h1>
 
-<textarea id="text" style="width:80%;height:150px;"></textarea>
+<textarea id="textInput" placeholder="Enter text"></textarea>
 
 <br><br>
 
-<button onclick="upper()">UPPERCASE</button>
-<button onclick="lower()">lowercase</button>
+<button onclick="toUpper()">UPPERCASE</button>
+<button onclick="toLower()">lowercase</button>
 
-<p id="result"></p>
+<br><br>
+
+<textarea id="result"></textarea>
+
+<section>
+
+<h2>About this Case Converter</h2>
+
+<p>
+This free Case Converter allows you to instantly convert text between uppercase and lowercase. 
+It is useful for writers, developers and anyone editing text quickly.
+</p>
+
+<h2>How to use this tool</h2>
+
+<ol>
+<li>Paste or type your text.</li>
+<li>Click uppercase or lowercase.</li>
+<li>Your converted text will appear instantly.</li>
+</ol>
+
+<h2>Why use a case converter?</h2>
+
+<p>
+Text case tools save time when editing content, coding, writing articles or formatting text documents.
+</p>
 
 </section>
 
-<script>
-
-function upper(){
-let text=document.getElementById("text").value;
-document.getElementById("result").innerText=text.toUpperCase();
-}
-
-function lower(){
-let text=document.getElementById("text").value;
-document.getElementById("result").innerText=text.toLowerCase();
-}
-
-</script>
+<script src="../script.js"></script>
 
 </body>
 </html>
