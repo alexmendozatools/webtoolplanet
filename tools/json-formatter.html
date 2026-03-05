@@ -1,42 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <title>JSON Formatter | WebToolPlanet</title>
-<link rel="stylesheet" href="/style.css">
-
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-<header class="header">
-
-<div class="logo">
-🪐 WebToolPlanet
-</div>
-
-<nav>
-
-<ul class="menu">
-
-<li><a href="/">Home</a></li>
-<li><a href="/tools.html">Tools</a></li>
-
-</ul>
-
-</nav>
-
+<header>
+<h1>JSON Formatter</h1>
 </header>
 
-<section class="hero">
+<section class="tool-container">
 
-<h1>JSON Formatter</h1>
-
-<p>Format and beautify JSON instantly.</p>
-
-<textarea id="jsonInput" placeholder="Paste JSON here..." style="width:80%;height:150px;padding:10px;"></textarea>
+<textarea id="jsonInput" placeholder="Paste JSON here"></textarea>
 
 <br><br>
 
@@ -46,30 +26,31 @@
 
 </section>
 
-<script>
+<section class="seo-section">
 
-function formatJSON(){
+<h2>About this JSON Formatter</h2>
 
-try{
+<p>
+A JSON Formatter helps developers and data analysts organize and display JSON data in a readable format. 
+It automatically adds indentation and structure to make complex JSON data easier to understand.
+</p>
 
-let json=document.getElementById("jsonInput").value;
+<h2>How to use the JSON formatter</h2>
 
-let formatted=JSON.stringify(JSON.parse(json),null,4);
+<ol>
+<li>Paste your JSON code in the input box.</li>
+<li>Click the format button.</li>
+<li>The formatted JSON will appear below.</li>
+</ol>
 
-document.getElementById("output").textContent=formatted;
+<h2>Why format JSON?</h2>
 
-}
+<p>
+Raw JSON can be difficult to read when it is compressed. Formatting improves readability and helps developers debug or analyze data structures more easily.
+</p>
 
-catch{
-
-document.getElementById("output").textContent="Invalid JSON";
-
-}
-
-}
-
-</script>
+</section>
 
 </body>
-
 </html>
+
