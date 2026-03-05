@@ -1,69 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <title>Word Counter | WebToolPlanet</title>
-<link rel="stylesheet" href="/style.css">
-
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-<header class="header">
-
-<div class="logo">
-🪐 WebToolPlanet
-</div>
-
-<nav>
-
-<ul class="menu">
-
-<li><a href="/">Home</a></li>
-<li><a href="/tools.html">Tools</a></li>
-
-</ul>
-
-</nav>
-
+<header>
+<h1>Word Counter</h1>
 </header>
 
+<section class="tool-container">
 
-<section class="hero">
-
-<h1>Word Counter</h1>
-
-<p>Count words and characters instantly.</p>
-
-<textarea id="text" placeholder="Type or paste text here..." style="width:80%;height:150px;padding:10px;"></textarea>
+<textarea id="textInput" placeholder="Enter your text"></textarea>
 
 <br><br>
 
-<button onclick="countWords()">Count</button>
+<button onclick="countWords()">Count Words</button>
 
 <p id="result"></p>
 
 </section>
 
-<script>
+<section class="seo-section">
 
-function countWords(){
+<h2>About this Word Counter</h2>
 
-let text=document.getElementById("text").value;
+<p>
+This free Word Counter tool allows you to quickly count the number of words and characters in any text. 
+It is useful for writers, students, bloggers and anyone who needs to meet word limits.
+</p>
 
-let words=text.trim().split(/\s+/).filter(word => word.length>0);
+<h2>How to use the tool</h2>
 
-let chars=text.length;
+<ol>
+<li>Paste or type your text in the box.</li>
+<li>Click the count button.</li>
+<li>The tool will show the total number of words.</li>
+</ol>
 
-document.getElementById("result").innerHTML=
-"Words: "+words.length+" | Characters: "+chars;
+<h2>Who uses word counters?</h2>
 
-}
+<p>
+Word counters are commonly used when writing essays, blog posts, articles and social media content 
+where word limits or character limits are important.
+</p>
 
-</script>
+</section>
 
 </body>
-
 </html>
+
