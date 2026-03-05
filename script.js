@@ -82,3 +82,19 @@ age--;
 document.getElementById("result").innerText="Age: "+age;
 
 }
+
+function toUpper(){
+
+var text=document.getElementById("textInput").value;
+
+document.getElementById("result").value=text.toUpperCase();
+
+}
+
+function toLower(){
+
+var text=document.getElementById("textInput").value;
+
+document.getElementById("result").value=text.toLowerCase();
+
+}
