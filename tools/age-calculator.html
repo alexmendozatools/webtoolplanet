@@ -1,76 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <title>Age Calculator | WebToolPlanet</title>
-<link rel="stylesheet" href="/style.css">
-
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-<header class="header">
-
-<div class="logo">
-🪐 WebToolPlanet
-</div>
-
-<nav>
-
-<ul class="menu">
-
-<li><a href="/">Home</a></li>
-<li><a href="/tools.html">Tools</a></li>
-
-</ul>
-
-</nav>
-
+<header>
+<h1>Age Calculator</h1>
 </header>
 
-
-<section class="hero">
-
-<h1>Age Calculator</h1>
-
-<p>Calculate your exact age.</p>
+<section class="tool-container">
 
 <input type="date" id="birthdate">
 
 <br><br>
 
-<button onclick="calculateAge()">Calculate</button>
+<button onclick="calculateAge()">Calculate Age</button>
 
 <p id="ageResult"></p>
 
 </section>
 
-<script>
+<section class="seo-section">
 
-function calculateAge(){
+<h2>About this Age Calculator</h2>
 
-let birthdate=new Date(document.getElementById("birthdate").value);
+<p>
+This free age calculator allows you to quickly determine your exact age based on your birth date. 
+It calculates the difference between your birth date and today's date.
+</p>
 
-let today=new Date();
+<h2>How to use the tool</h2>
 
-let age=today.getFullYear()-birthdate.getFullYear();
+<ol>
+<li>Select your birth date.</li>
+<li>Click the calculate button.</li>
+<li>Your exact age will be displayed instantly.</li>
+</ol>
 
-let m=today.getMonth()-birthdate.getMonth();
+<h2>Why use an age calculator?</h2>
 
-if(m<0 || (m===0 && today.getDate()<birthdate.getDate())){
+<p>
+Age calculators are useful for forms, official documents, events or simply checking your age in years quickly and accurately.
+</p>
 
-age--;
-
-}
-
-document.getElementById("ageResult").innerText="Your age: "+age+" years";
-
-}
-
-</script>
+</section>
 
 </body>
-
 </html>
+
