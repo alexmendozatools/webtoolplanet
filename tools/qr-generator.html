@@ -1,74 +1,59 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-<title>QR Generator | WebToolPlanet</title>
-<link rel="stylesheet" href="/style.css">
-
+<title>QR Code Generator | WebToolPlanet</title>
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-<header class="header">
-
-<div class="logo">
-🪐 WebToolPlanet 🔧
-</div>
-
-<nav>
-<ul class="menu">
-
-<li><a href="/">Home</a></li>
-
-<li class="dropdown">
-
-<a href="#">Tools ▾</a>
-
-<ul class="submenu">
-
-<li><a href="/tools/qr-generator.html">QR Generator</a></li>
-<li><a href="/tools/password-generator.html">Password Generator</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-</nav>
-
+<header>
+<h1>QR Code Generator</h1>
 </header>
 
-<section class="hero">
+<section class="tool-container">
 
-<h1>QR Code Generator</h1>
-<p>Create QR codes instantly.</p>
+<p>Enter text or a URL to generate a QR code.</p>
 
-<input id="text" placeholder="Enter text or URL">
+<input type="text" id="qrText" placeholder="Enter text or URL">
 
-<button onclick="generateQR()">Generate</button>
+<br><br>
 
-<div id="qrcode"></div>
+<button onclick="generateQR()">Generate QR Code</button>
+
+<div id="qrResult"></div>
 
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<section class="seo-section">
 
-<script>
+<h2>About this QR Code Generator</h2>
 
-function generateQR(){
+<p>
+This free QR Code Generator allows you to instantly convert text, links or other information into a scannable QR code. 
+QR codes are widely used for sharing links, contact details, Wi-Fi passwords and many other types of information.
+</p>
 
-let text=document.getElementById("text").value;
+<h2>How to use this tool</h2>
 
-document.getElementById("qrcode").innerHTML="";
+<ol>
+<li>Enter the text or URL you want to convert.</li>
+<li>Click the generate button.</li>
+<li>Download or scan the QR code with your device.</li>
+</ol>
 
-new QRCode(document.getElementById("qrcode"),text);
+<h2>Why use QR codes?</h2>
 
-}
+<p>
+QR codes make it easy to share information quickly. 
+They are commonly used in marketing, business cards, menus, tickets and many other digital interactions.
+</p>
 
-</script>
+</section>
 
 </body>
-
 </html>
+```
